@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mismatch-increment-test"
+version = "1.0.0"
+description = "Test whether a harmonization lowers follow-up volume error, against a matched same-day rescan"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Jintao Song"}, {name = "Ying Gong"}]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22"]
+keywords = ["CT", "volumetry", "harmonization", "test-retest", "segmentation", "longitudinal"]
+
+[project.scripts]
+mismatch-increment-test = "mismatch_increment_test.cli:main"
+
+[tool.setuptools]
+packages = ["mismatch_increment_test"]
